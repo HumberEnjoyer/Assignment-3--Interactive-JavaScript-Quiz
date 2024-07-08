@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.padding{
+    padding:2%;
+}
+.margin{
+    margin:2%
+}
+
+/*border radius*/
+.radius{
+    border-radius: 1.5rem;
+}
+
+/*text color*/
+h1, h2, h3, h4, p, span {
+    color: #333333;
+}
+
+/*main*/
+main{
+    margin: 0 auto;
+    width: 85%;
+    background: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.main_Quiz{
+    display: none;
+}
+body {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.gif-container {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%); 
+    max-width: 1200px;
+}
+
+/*header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    align-items: center;
+}
+
+/*get started and final score*/
+.get_Started, .final_Score{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.get_Started > *, .final_Score > *{
+    margin: 0 10%;
+    text-align: center;
+}
+.instructions, .display_Score{
+    background-color: rgba(240, 240, 240, 0.9);
+    margin-bottom: 5%;
+    padding: 4%;
+    backdrop-filter: blur(2px);
+}
+
+.start_Button{
+    background: linear-gradient(90deg, rgba(72, 85, 99, 1) 0%, rgba(41, 50, 60, 1) 100%);
+    color: #ffffff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    cursor: pointer;
+    border-style: none;
+    width: 60%;
+    margin-bottom: 5%;
+}
+.start_Button:hover{
+    background: linear-gradient(90deg, rgba(41, 50, 60, 1) 0%, rgba(72, 85, 99, 1) 100%);
+}
+
+.final_Score{
+    height: 80vh;
+    display: none;
+}
+
+.score_Quit{
+    width: 60%;
+    margin: 0 auto;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+/*progress section*/
+.progress_Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-style: none;
+}
+
+.progress_Bar{
+    width: 70%;
+    accent-color: #495464;
+}
+/*questions */
+#option-1, #option-2, #option-3, #option-4{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 3% 0;
+    border-style: none;
+    cursor: pointer;
+    background: rgba(240, 240, 240, 0.8);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    backdrop-filter: blur(2px);
+    text-align: left;
+}
+
+/*footer buttons*/
+footer{
+    display: flex;
+    flex-direction: column;
+}
+footer > button{
+    width:30%;
+    margin: 2% auto;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.Submit{
+    background: linear-gradient(90deg, rgba(47, 85, 151, 1) 0%, rgba(0, 123, 255, 1) 100%);
+    color: #ffffff;
+}
+.Submit:hover{
+    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(47, 85, 151, 1) 100%);
+}
+.next_Question, .finish_Quiz{
+    background: linear-gradient(90deg, rgba(108, 117, 125, 1) 0%, rgba(73, 80, 87, 1) 100%);
+    display: none;
+    color: #ffffff;
+}
+
+.next_Question:hover, .finish_Quiz:hover{
+    background: linear-gradient(90deg, rgba(73, 80, 87, 1) 0%, rgba(108, 117, 125, 1) 100%);
+}
+
+.quit_Quiz{
+    background: linear-gradient(90deg, rgba(220, 53, 69, 1) 0%, rgba(255, 87, 104, 1) 100%);
+    color: #ffffff;
+}
+.quit_Quiz:hover{
+    background: linear-gradient(90deg, rgba(255, 87, 104, 1) 0%, rgba(220, 53, 69, 1) 100%);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+  </head>
+  <body>
+    <main class="radius">
+      <!--header-->
+      <header class="padding margin">
+        <h1>The Quiz</h1>
+      </header>
+      <!---get started page---->
+     <section class="get_Started">
+        <div class="instructions radius">
+            <h2>Click button to start the quiz.</h2>
+            <p class="padding">
+                There will be a total of 5 randomly chosen questions.
+            </p>
+        </div>
+        <button id="startBTN" type="button" class="start_Button padding margin radius">Get started</button>
+     </section>
+      <!---main quiz body--->
+      <section class="main_Quiz">
+        <!--progress bar-->
+         <section class="progress_Container margin radius">
+            <progress class="progress_Bar p2" value="0" max="100"></progress>
+            <p>
+                Question <span class="current_Question">0</span> of
+                <span class="total_Questions">1</span>
+            </p>
+        </section>
+
+
+        <!-- questions and answers-->
+         <section class="question_Container padding margin">
+            <h2 id="question"> </h2>
+            <div class="option_Buttons">
+                <button data-index="0" id="option-1" type="button" class="padding option radius" onclick="optionClicked(this)">123</button>
+                <button data-index="1" id="option-2" type="button" class="padding option radius" onclick="optionClicked(this)">123</button>
+                <button data-index="2" id="option-3" type="button" class="padding option radius" onclick="optionClicked(this)">123</button>
+                <button data-index="3" id="option-4" type="button" class="padding option radius" onclick="optionClicked(this)">123</button>
+            </div>
+         </section>
+
+        <!--footer buttons--->
+        <footer class="padding margin">
+            <button type="button" class="Submit padding radius">Submit</button>
+            <button type="button" class="next_Question padding radius">Next</button>
+            <button type="button" class="finish_Quiz padding radius">Finsih</button>
+            <button type="button" class="quit_Quiz padding radius">Quit</button>
+        </footer>
+    </section>
+      <!---score page--->
+      <section class="final_Score">
+        <div class="display_Score radius">
+            <h2>your total correct answers:</h2>
+            <span class="my_Score">0</span> out of
+            <span class="total_Score">1</span>
+            <h3 class="padding">Nice!</h3>
+        </div>
+        <button id="restartBTN" type="button" class="start_Button padding  radius">Restart Quiz</button>
+        <button type="button" class="quit_Quiz score_Quit padding radius">Quit Quiz</button>
+
+      </section>
+      </main>
+      <!--lottie animation container-->
+        <div id="lottie-animation" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;"></div>
+        <!--gif container-->
+        <div id="wrong-answer-gif" class="gif-container" style="display: none;">
+            <img src="https://media1.tenor.com/m/OkxRvY3YUvYAAAAC/cat-in-the-hat-stupid.gif" alt="Wrong Answer GIF" style="width: 100%; height: auto;">
+          </div>
+    </body>
+  <script src="script.js  "></script>
+</html>
